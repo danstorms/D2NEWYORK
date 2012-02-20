@@ -1,5 +1,6 @@
 body {
 	background: #000;
+	color: grey;
 }
 
 /* this is used to set the background image */
@@ -47,7 +48,7 @@ section h1 {
 
 #page-wrap { 
 	position: relative; 
-	width: 400px; 
+	width: 450px; 
 	margin: 270px auto; 
 	padding: 20px; 
 	background: black; 
