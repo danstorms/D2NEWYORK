@@ -1,6 +1,6 @@
 D2newyork::Application.routes.draw do
 
-  root :to => 'pages#home'
+  # root :to => '/public/splash.html'
 
 
 
