@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>D2NEWYORK | <%= title %></title>
+    <title><%= title %></title>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
   </head>
   <body>
-	<div class="container">
+	
+	<img src="images/curtainwspotlight.jpg" class="bg">
+	
+	<div id="page-wrap">
 	  <%= render 'layouts/header' %>
 	  <section class="round">
 			<% flash.each do |key, value| %>

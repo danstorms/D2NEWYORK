@@ -1,7 +1,12 @@
 D2newyork::Application.routes.draw do
 
-  # root :to => '/public/splash.html'
+  # root :to => '/public/index.html'
+  # don't need this route to go to just a normal index.html page
 
+  match '/main',      :to => 'pages#main'
+  match '/info',      :to => 'pages#info'
+  match '/registry',  :to => 'pages#registry'
+  match '/fun',       :to => 'pages#fun'
 
 
 
