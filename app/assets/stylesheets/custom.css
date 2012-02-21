@@ -4,6 +4,9 @@ body {
 }
 
 /* this is used to set the background image */
+
+/* TODO: I think the background image needs to be of one div tag and then other divs are below */
+
 img.bg {
 		/* Set rules to fill background */
 		min-height: 100%;
