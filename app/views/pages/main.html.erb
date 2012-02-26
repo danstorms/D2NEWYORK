@@ -1,14 +1,17 @@
 <div class="left-side">
 	<h1>RSVP</h1>
 
-  <ul>
-		<li>Name</li>
-		<li>Email   <!-- <%= gravatar_image_tag('danstorms@gmail.com') %> --></li>
-		<li>Mobile Phone</li>
-		<li>Facebook Profile</li>
-		<li>Twitter handle @</li>
-	</ul>
-</div>
+<%= form_for(@email) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+
 
 <div class="right-side">
 	<ul>

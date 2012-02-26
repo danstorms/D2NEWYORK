@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
   def main
     @title = "Main"
+    
+    @email = Email.new
+  end
+  
+  def show
+    @email = Email.find(params[:id])
   end
 
   def info
