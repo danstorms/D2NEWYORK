@@ -1,5 +1,5 @@
 class Email < ActiveRecord::Base
-  attr_accessible :email
+  attr_accessible :name, :email, :guest, :guest_name, :mobile_phone, :facebook_url, :twitter_handle
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

@@ -2,10 +2,29 @@
 	<h1>RSVP</h1>
 
 <%= form_for(@email) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
+	<div class="field">
+	  <%= f.label :name %><br />
+	  <%= f.text_field :name %>
+	</div>
+	<div class="field">
+	  <%= f.label :email %><br />
+	  <%= f.text_field :email %>
+	</div>
+	<div class="field">
+	  Bringing a <%= f.label :guest %>?<br />
+  	<%= f.select :guest, [['Yes','yes'],['No','no']] %>  &nbsp; Who? <%= f.text_field :guest_name %></div>
+	<div class="field">
+	  <%= f.label :mobile_phone %><br />
+	  <%= f.text_field :mobile_phone %>
+	</div>
+	<div class="field">
+	  <%= f.label :facebook_url %><br />
+	  <%= f.text_field :facebook_url %>
+	</div>
+	<div class="field">
+	  <%= f.label :twitter_handle %><br />
+	  @<%= f.text_field :twitter_handle %>
+	</div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

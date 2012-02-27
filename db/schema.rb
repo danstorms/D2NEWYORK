@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120227001309) do
+ActiveRecord::Schema.define(:version => 20120227010148) do
 
   create_table "emails", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20120227001309) do
     t.string   "twitter_handle"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "guest"
+    t.string   "guest_name"
   end
 
 end
