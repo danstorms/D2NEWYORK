@@ -1,0 +1,31 @@
+<h1>Listing emails</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile phone</th>
+    <th>Facebook url</th>
+    <th>Twitter handle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emails.each do |email| %>
+  <tr>
+    <td><%= email.name %></td>
+    <td><%= email.email %></td>
+    <td><%= email.mobile_phone %></td>
+    <td><%= email.facebook_url %></td>
+    <td><%= email.twitter_handle %></td>
+    <td><%= link_to 'Show', email %></td>
+    <td><%= link_to 'Edit', edit_email_path(email) %></td>
+    <td><%= link_to 'Destroy', email, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Email', new_email_path %>

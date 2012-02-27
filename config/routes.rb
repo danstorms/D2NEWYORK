@@ -1,5 +1,7 @@
 D2newyork::Application.routes.draw do
 
+  resources :emails
+
   # root :to => '/public/index.html'
   # don't need this route to go to just a normal index.html page
 

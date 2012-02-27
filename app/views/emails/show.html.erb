@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @email.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @email.email %>
+</p>
+
+<p>
+  <b>Mobile phone:</b>
+  <%= @email.mobile_phone %>
+</p>
+
+<p>
+  <b>Facebook url:</b>
+  <%= @email.facebook_url %>
+</p>
+
+<p>
+  <b>Twitter handle:</b>
+  <%= @email.twitter_handle %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>
