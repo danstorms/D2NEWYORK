@@ -13,26 +13,27 @@
 
 		<div class="field">
 		  <%= f.label :name %><br />
-		  <%= f.text_field :name %>
+		  <%= f.text_field :name, :class => "textfield" %>
 		</div>
 		<div class="field">
 		  <%= f.label :email %><br />
-		  <%= f.text_field :email %>
+		  <%= f.text_field :email, :class => "textfield" %>
 		</div>
 		<div class="field">
 		  Bringing a <%= f.label :guest %>?<br />
-	  	<%= f.select :guest, [['Yes','yes'],['No','no']] %>  &nbsp; Who? <%= f.text_field :guest_name %></div>
+	  	<%= f.select :guest, [['Yes','yes'],['No','no']], :class => "textfield" %> &nbsp; Who? <br />
+	    &nbsp; <%= f.text_field :guest_name, :class => "textfield" %></div>
 		<div class="field">
 		  <%= f.label :mobile_phone %><br />
-		  <%= f.text_field :mobile_phone %>
+		  <%= f.text_field :mobile_phone, :class => "textfield" %>
 		</div>
 		<div class="field">
 		  <%= f.label :facebook_url %><br />
-		  <%= f.text_field :facebook_url %>
+		  <%= f.text_field :facebook_url, :class => "textfield" %>
 		</div>
 		<div class="field">
 		  <%= f.label :twitter_handle %><br />
-		  @<%= f.text_field :twitter_handle %>
+		  @<%= f.text_field :twitter_handle, :class => "textfield" %>
 		</div>
 	  <div class="actions">
 	    <%= f.submit "Sign up" %>

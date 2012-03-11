@@ -1,32 +1,10 @@
 body {
 	background: #000;
-	color: grey;
-}
-
-/* this is used to set the background image */
-
-/* TODO: I think the background image needs to be of one div tag and then other divs are below */
-
-img.bg {
-		/* Set rules to fill background */
-		min-height: 100%;
-		min-width: 1024px;
-
-		/* Set up proportionate scaling */
-		width: 100%;
-		height: auto;
-
-		/* Set up positioning */
-		position: fixed;
-		top: 0;
-		left: 0;
-	}
-
-	@media screen and (max-width: 1024px) { /* Specific to this particular image */
-		img.bg {
-			left: 50%;
-			margin-left: -512px;   /* 50% */
-		}
+	background-image:url('/images/curtainlayers_1000w.png');
+	background-repeat:no-repeat;
+	background-position:center top;
+	color: gray;
+	font-family: 'Museo Slab', Georgia, Serif;
 }
 
 header {
@@ -45,14 +23,14 @@ section {
 }
 
 section h1 {
-	color: grey;
+	color: gray;
   font-size: 150%;
 }
 
 #page-wrap { 
 	position: relative; 
 	width: 450px; 
-	margin: 270px auto; 
+	margin: 400px auto; 
 	padding: 20px; 
 	background: black; 
 	-moz-box-shadow: 0 0 20px black; 
@@ -60,24 +38,37 @@ section h1 {
 	box-shadow: 0 0 20px black; }
 
 p { 
-	font: 15px/2 Georgia, Serif; 
+	font: 15px/2; 
 	margin: 0 0 30px 0; 
-	text-indent: 40px; }
+	text-indent: 40px;
+}
+
+div.left-side {
+	float: left;
+	width: 220px;
+}
+
+div.right-side {
+	float: left;
+	margin-right: 200px;
+}
+
+
 
 /* Links */
 
 a {
-  color: grey;
+  color: gray;
   text-decoration: none;
 }
 
 a:hover {
-  color: grey;
+  color: gray;
   text-decoration: underline;
 }
 
 a:visited {
-  color: grey;
+  color: gray;
 }
 
 /* Navigation */
@@ -109,7 +100,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: grey;
+  color: gray;
 }
 
 nav ul li a:hover {
@@ -164,6 +155,21 @@ td.sidebar {
 div.field, div.actions {
 	margin-bottom: 10px;
 }
+
+
+input.textfield {
+	background-image:url('/images/form_bg_darker.png');
+	background-repeat:repeat-x;
+	border:1px solid #d1c7ac;
+	border-radius:4px;
+	width: 150px;
+	color:#333333;
+	padding:3px;
+	margin-right:4px;
+	margin-bottom:8px;
+	font-family:tahoma, arial, sans-serif;
+}
+
 
 .field_with_errors {
 	margin-top: 10px;
