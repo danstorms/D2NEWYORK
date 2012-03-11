@@ -1,1 +1,10 @@
+# Do this first every new console session
 rvm --default use ruby-1.9.3-p125@rails32
+
+
+# To commit & deploy new code
+
+git add .
+git commit
+git push origin master
+git push heroku master

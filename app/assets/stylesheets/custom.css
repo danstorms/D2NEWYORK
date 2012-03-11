@@ -4,7 +4,7 @@ body {
 	background-repeat:no-repeat;
 	background-position:center top;
 	color: gray;
-	font-family: 'Museo Slab', Georgia, Serif;
+	font-family: Serif, 'Museo Slab', Georgia;
 }
 
 header {
