@@ -3,11 +3,18 @@ body {
 	background-image:url('/images/curtainlayers_1000w.png');
 	background-repeat:no-repeat;
 	background-position:center top;
-	color: gray;
-	font-family: Serif, 'Museo Slab', Georgia;
+	color: #B0B0B0;
+	font-family: Tahoma, 'Museo Slab', Georgia, Serif;
 }
 
 header {
+}
+
+header h1 {
+	color: #D0D0D0;
+  font-size: 300%;
+	font-weight: 550;
+	text-align: center;
 }
 
 header img {
@@ -23,8 +30,13 @@ section {
 }
 
 section h1 {
-	color: gray;
+	color: #D0D0D0;
   font-size: 150%;
+}
+
+section h2 {
+	color: #D0D0D0;
+  font-size: 120%;
 }
 
 #page-wrap { 
@@ -40,7 +52,6 @@ section h1 {
 p { 
 	font: 15px/2; 
 	margin: 0 0 30px 0; 
-	text-indent: 40px;
 }
 
 div.left-side {
@@ -48,9 +59,10 @@ div.left-side {
 	width: 220px;
 }
 
-div.right-side {
-	float: left;
-	margin-right: 200px;
+div.agenda-day {
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 
 
@@ -58,7 +70,7 @@ div.right-side {
 /* Links */
 
 a {
-  color: gray;
+  color: #C0C0C0;
   text-decoration: none;
 }
 
@@ -74,7 +86,6 @@ a:visited {
 /* Navigation */
 
 nav {
-  float: right;
 }
 
 nav {
@@ -110,9 +121,9 @@ nav ul li a:hover {
 /* Round corners */
 
 .round {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  border-radius:         10px;
+  -moz-border-radius:    5px;
+  -webkit-border-radius: 5px;
+  border-radius:         px;
 }
 
 footer {
