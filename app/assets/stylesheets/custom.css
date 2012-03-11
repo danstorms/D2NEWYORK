@@ -65,6 +65,10 @@ div.agenda-day {
 	-moz-border-radius:25px;
 }
 
+div.subtext {
+	font-size: 70%;
+}
+
 
 
 /* Links */
