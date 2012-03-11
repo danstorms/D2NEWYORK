@@ -25,13 +25,13 @@
 	    &nbsp; <%= f.text_field :guest_name, :class => "textfield" %></div>
 		<div class="field">
 		  <%= f.label :mobile_phone %><br />
-		  <%= f.text_field :mobile_phone, :class => "textfield" %>
+		  <%= f.text_field :mobile_phone, :value => "234-567-8901", :class => "textfield" %>
 		</div>
 		<div class="field">
 		  <%= f.label :facebook_url %><br />
 			<div class="subtext">this is your FB homepage link
-				<br />(eg. <a href="http://www.facebook.com/startstorms" target="_blank">http://www.facebook.com/startstorms</a>)</div>
-		  <%= f.text_field :facebook_url, :class => "textfield" %>
+				<br />(eg. http://www.facebook.com/startstorms)</div>
+		  <%= f.text_field :facebook_url, :value => "http://www.facebook.com/", :class => "textfield" %>
 		</div>
 		<div class="field">
 		  <%= f.label :twitter_handle %><br />
