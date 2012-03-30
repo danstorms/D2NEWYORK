@@ -21,7 +21,7 @@
 		</div>
 		<div class="field">
 		  Bringing a <%= f.label :guest %>?<br />
-	  	<%= f.select :guest, [['Yes','yes'],['No','no']], :class => "textfield" %> &nbsp; Who? <br />
+	  	<%= f.select :guest, [['No','no'],['Yes','yes']], :class => "textfield" %> &nbsp; Who? <br />
 	    &nbsp; <%= f.text_field :guest_name, :class => "textfield" %></div>
 		<div class="field">
 		  <%= f.label :mobile_phone %><br />
@@ -38,6 +38,6 @@
 		  @<%= f.text_field :twitter_handle, :class => "textfield" %>
 		</div>
 	  <div class="actions">
-	    <%= f.submit "Sign up" %>
+	    <%= f.submit "Submit" %>
 	  </div>
 	<% end %>

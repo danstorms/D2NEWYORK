@@ -12,7 +12,7 @@ header {
 
 header h1 {
 	color: #272323;
-  font-size: 500%;
+  font-size: 550%;
 	font-weight: 700;
 	text-align: center;
 }
@@ -31,7 +31,7 @@ section {
 
 section h1 {
 	color: #D0D0D0;
-  font-size: 150%;
+  font-size: 175%;
 }
 
 section h2 {
@@ -42,7 +42,7 @@ section h2 {
 #page-wrap { 
 	position: relative; 
 	width: 450px; 
-	margin: 400px auto; 
+	margin: 260px auto; 
 	padding: 20px; 
 	background: black; 
 	-moz-box-shadow: 0 0 20px black; 

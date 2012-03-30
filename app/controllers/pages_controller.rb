@@ -1,12 +1,16 @@
 class PagesController < ApplicationController
-  def main
-    @title = "Main"
+  def rsvp
+    @title = "RSVP"
     
     @email = Email.new
   end
   
   def show
     @email = Email.find(params[:id])
+  end
+
+  def schedule
+    @title = "Schedule"
   end
 
   def info
