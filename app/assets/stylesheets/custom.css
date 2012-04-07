@@ -177,7 +177,7 @@ input.textfield {
 	background-repeat:repeat-x;
 	border:1px solid #d1c7ac;
 	border-radius:4px;
-	width: 150px;
+	width: 250px;
 	color:#333333;
 	padding:3px;
 	margin-right:4px;
@@ -227,6 +227,6 @@ input.textfield {
 	list-style: square;
 }
 
-
-
-
+li {
+	line-height: 2;
+}

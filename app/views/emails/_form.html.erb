@@ -21,8 +21,9 @@
 		</div>
 		<div class="field">
 		  Bringing a <%= f.label :guest %>?<br />
-	  	<%= f.select :guest, [['No','no'],['Yes','yes']], :class => "textfield" %> &nbsp; Who? <br />
-	    &nbsp; <%= f.text_field :guest_name, :class => "textfield" %></div>
+	  	<%= f.select :guest, [['No','no'],['Yes','yes']], :class => "textfield" %> <br />
+			Who? <br />
+	    <%= f.text_field :guest_name, :class => "textfield" %></div>
 		<div class="field">
 		  <%= f.label :mobile_phone %><br />
 		  <%= f.text_field :mobile_phone, :value => "234-567-8901", :class => "textfield" %>
