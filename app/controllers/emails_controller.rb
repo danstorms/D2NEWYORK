@@ -44,7 +44,7 @@ class EmailsController < ApplicationController
 
     respond_to do |format|
       if @email.save
-        format.html { redirect_to @email, notice: 'Email was successfully created.' }
+        format.html { redirect_to @email, notice: "Thanks! We're looking foward to seeing you in your best!" }
         format.json { render json: @email, status: :created, location: @email }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class EmailsController < ApplicationController
 
     respond_to do |format|
       if @email.update_attributes(params[:email])
-        format.html { redirect_to @email, notice: 'Email was successfully updated.' }
+        format.html { redirect_to @email, notice: "Thanks! We're looking foward to seeing you in your best!" }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

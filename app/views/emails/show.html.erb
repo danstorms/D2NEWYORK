@@ -1,12 +1,9 @@
-<!-- auto redirect in 5 secs -->
-<meta http-equiv="refresh" content="10;url=/info">
+<p>Want to <%= link_to "see the schedule", schedule_path() %>?</p>
 
+<p>Wondering <%= link_to "where you'll stay", info_path() %>?</p>
 
-<p id="notice"><%= notice %></p>
+<p>If you see something you want to change, <%= link_to 'click here to edit', edit_email_path(@email) %>.</p>
 
-<h1>Thanks for your RSVP!</h1>
-
-<p>You'll be redirected now to the Info page to continue...</p>
 
 <p>
   <b>Name:</b>
@@ -41,4 +38,4 @@
 
 
 <%= link_to 'Edit', edit_email_path(@email) %> |
-<%= link_to 'Main', rsvp_path %>
+<%= link_to 'Main', main_path %>

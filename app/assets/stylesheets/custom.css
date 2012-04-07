@@ -76,6 +76,7 @@ div.subtext {
 a {
   color: #C0C0C0;
   text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -85,6 +86,7 @@ a:hover {
 
 a:visited {
   color: #C0C0C0;
+	text-decoration: underline;
 }
 
 /* Navigation */
@@ -112,14 +114,18 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: #C0C0C0;
+  text-decoration: none;
 }
 
 nav ul li a:visited {
   color: #C0C0C0;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #C0C0C0;
+  text-decoration: none;
 }
 
 /* Round corners */
