@@ -178,6 +178,11 @@ div.field, div.actions {
 	margin-bottom: 10px;
 }
 
+hr {
+	color: #4C0000;
+	background-color: #4C0000;
+}
+
 
 input.textfield {
 	background-image:url('/images/form_bg_darker.png');
