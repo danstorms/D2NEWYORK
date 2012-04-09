@@ -8,20 +8,21 @@ body {
 }
 
 /*------------------------------------*\
-	IPHONE
+	IPHONE - not working yet
 \*------------------------------------*/
-@media all and (max-device-width: 480px){
+/* @media all and (max-device-width: 480px){
 	body{
   	-webkit-text-size-adjust:none;
   	font-family: Tahoma, "Museo Slab", Georgia, Serif;
   	padding:5px;
-/*		background: #000; */
+		background: #000; 
 		background-image:url('/images/curtainlayers_1000w.png');
 		background-repeat:no-repeat;
 		background-position:center top;
 		color: #B0B0B0;
 	}
 }
+*/
 
 header {
 }
