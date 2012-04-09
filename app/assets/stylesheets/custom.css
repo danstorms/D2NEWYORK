@@ -10,7 +10,7 @@ body {
 /*------------------------------------*\
 	IPHONE
 \*------------------------------------*/
-@media screen and (max-device-width: 480px){
+@media all and (max-device-width: 480px){
 	body{
   	-webkit-text-size-adjust:none;
   	font-family: Tahoma, "Museo Slab", Georgia, Serif;
