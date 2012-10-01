@@ -10,7 +10,7 @@ D2newyork::Application.routes.draw do
   match '/schedule',  :to => 'pages#schedule'
   match '/info',      :to => 'pages#info'
   match '/registry',  :to => 'pages#registry'
-  match '/fun',       :to => 'pages#fun'
+  match '/visit',     :to => 'pages#visit'
 
 
 
