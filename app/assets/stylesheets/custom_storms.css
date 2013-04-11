@@ -1,8 +1,5 @@
 body {
 	background: #000;
-	background-image:url('/images/curtainlayers_1000w.png');
-	background-repeat:no-repeat;
-	background-position:center top;
 	color: #B0B0B0;
 	font-family: Tahoma, "Museo Slab", Georgia, Serif;
 }
@@ -58,9 +55,7 @@ section h2 {
 
 #page-wrap { 
 	position: relative; 
-	width: 450px; 
-	margin: 260px auto; 
-	padding: 20px; 
+	margin-bottom: 20px; 
 	background: black; 
 	-moz-box-shadow: 0 0 20px black; 
 	-webkit-box-shadow: 0 0 20px black; 
