@@ -1,11 +1,11 @@
 <div class="after-wrapper">
   
 	<div>
-      <div id="nav">
+      <div id="filters">
           <ul>
-              <li><a href="" data-filter="*">All</a></li>
-              <li><a href="" data-filter=".canary">Canary Islands</a></li>
-              <li><a href="" data-filter=".sevilla">Sevilla</a></li>
+              <li><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".canary">Canary Islands</a></li>
+              <li><a href="#" data-filter=".sevilla">Sevilla</a></li>
           </ul>
       </div>
       
@@ -31,10 +31,19 @@
 <script src="/javascripts/jquery.isotope.min.js"></script>
 <script src="/javascripts/fake-element.js"></script>
 <script>
-  $('#container').isotope({
+  var $container = $('#container');
+  
+  $container.isotope({
     // options
     itemSelector : '.box',
     layoutMode : 'fitRows'
+  });
+  
+  // filter items when filter link is clicked
+  $('#filters a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({ filter: selector });
+    return false;
   });
   
 </script>
