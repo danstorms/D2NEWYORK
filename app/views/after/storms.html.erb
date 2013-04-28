@@ -4,38 +4,63 @@
       <div id="filters">
           <ul>
               <li><a href="#" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".ceremony">Wedding - Ceremony</a></li>
-              <li><a href="#" data-filter=".reception">Wedding - Reception</a></li>
-              <li><a href="#" data-filter=".canary">Honeymoon - Canary Islands</a></li>
-              <li><a href="#" data-filter=".sevilla">Honeymoon - Sevilla</a></li>
+              <li><a href="#" data-filter=".before">Getting Ready</a></li>
+              <li><a href="#" data-filter=".ceremony">Ceremony</a></li>
+              <li><a href="#" data-filter=".reception">Reception</a></li>
+              <li><a href="#" data-filter=".canary">Canary Islands</a></li>
+              <li><a href="#" data-filter=".sevilla">Sevilla</a></li>
+              <li><a href="#" data-filter=".granada">Granada</a></li>
+              <li><a href="#" data-filter=".morocco">Morocco</a></li>
           </ul>
       </div>
       
       <div id="container">
+        <% (1..40).each do |i| %>
+          <div class="box before">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Before'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+  			  </div>
+  			<% end %>
         <div class="box ceremony">
-          <iframe src="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <iframe src="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0" width="225" height="127" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
+        <% (41..63).each do |i| %>
+          <div class="box ceremony">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Ceremony'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+  			  </div>
+  			<% end %>
         <div class="box reception">
-          <iframe src="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          <iframe class='gallery' src="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" width="225" height="127" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
-        <div class="box canary">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-rQbLnSS/1/S/IMG_0057-S.jpg" width="225" />
-  			</div>
-  			<div class="box sevilla">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-vvvhVzc/1/S/IMG_0228-S.jpg" width="225" />
-  			</div>
-  			<div class="box canary">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-hmnqBdN/1/S/IMG_0060-S.jpg" width="225" />
-  			</div>
-  			<div class="box canary">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-kbsTzXK/1/S/IMG_0066-S.jpg" width="225" />
-  			</div>
-  			<div class="box canary">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-BM7ctVv/1/S/IMG_0069-S.jpg" width="225" />
-  			</div>
-  			<div class="box canary">
-  			  <img src="http://danstorms.smugmug.com/Other/D2-Spain-Morocco-Honeymoon/i-fM3qCWZ/1/S/IMG_0072-S.jpg" width="225" />
-  			</div>
+        <% (64..115).each do |i| %>
+          <div class="box reception">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+  			  </div>
+  			<% end %>
+        <% (121..138).each do |i| %>
+          <div class="box reception">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+  			  </div>
+  			<% end %>
+        <% (1..18).each do |i| %>
+          <div class="box canary">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Canary Islands'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (19..37).each do |i| %>
+          <div class="box sevilla">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Sevilla'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (40..67).each do |i| %>
+          <div class="box granada">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Granada'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (68..105).each do |i| %>
+          <div class="box morocco">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Morocco'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
   		</div>
 	</div>
 
@@ -44,13 +69,16 @@
 <script src="/javascripts/jquery-1.7.1.min.js"></script>
 <script src="/javascripts/jquery.isotope.min.js"></script>
 <script src="/javascripts/fake-element.js"></script>
+<script src="/javascripts/jquery.colorbox-min.js"></script>
 <script>
   var $container = $('#container');
   
-  $container.isotope({
-    // options
-    itemSelector : '.box',
-    layoutMode : 'masonry'
+  $container.imagesLoaded( function(){
+    $container.isotope({
+      // options
+      itemSelector : '.box',
+      layoutMode : 'masonry'
+    });
   });
   
   // filter items when filter link is clicked
@@ -60,4 +88,9 @@
     return false;
   });
   
+</script>
+<script>
+  $(document).ready(function(){
+	  $(".gallery").colorbox({rel:'gallery'});
+  });
 </script>
