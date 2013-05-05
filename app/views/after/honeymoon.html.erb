@@ -1,0 +1,67 @@
+<div class="after-wrapper">
+  
+	<div>
+      <div id="filters">
+          <ul>
+              <li><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".canary">Canary Islands</a></li>
+              <li><a href="#" data-filter=".sevilla">Sevilla</a></li>
+              <li><a href="#" data-filter=".granada">Granada</a></li>
+              <li><a href="#" data-filter=".morocco">Morocco</a></li>
+          </ul>
+      </div>
+      
+      <div id="container">
+        <% (1..18).each do |i| %>
+          <div class="box canary">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Canary Islands'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (19..37).each do |i| %>
+          <div class="box sevilla">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Sevilla'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (40..67).each do |i| %>
+          <div class="box granada">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Granada'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+        <% (68..105).each do |i| %>
+          <div class="box morocco">
+  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/<%= i %>.jpg' title='Honeymoon - Morocco'><img src="https://s3.amazonaws.com/d2newyork/images/225/<%= i %>.jpg" /></a>
+  			  </div>
+  			<% end %>
+  		</div>
+	</div>
+
+</div>
+
+<script src="/javascripts/jquery-1.7.1.min.js"></script>
+<script src="/javascripts/jquery.isotope.min.js"></script>
+<script src="/javascripts/fake-element.js"></script>
+<script src="/javascripts/jquery.colorbox-min.js"></script>
+<script>
+  var $container = $('#container');
+  
+  $container.imagesLoaded( function(){
+    $container.isotope({
+      // options
+      itemSelector : '.box',
+      layoutMode : 'masonry'
+    });
+  });
+  
+  // filter items when filter link is clicked
+  $('#filters a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({ filter: selector });
+    return false;
+  });
+  
+</script>
+<script>
+  $(document).ready(function(){
+	  $(".gallery").colorbox({rel:'gallery'});
+  });
+</script>
