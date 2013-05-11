@@ -1,43 +1,47 @@
 <div class="after-wrapper">
   
 	<div>
-      <div id="filters">
-          <ul>
-              <li><a href="#" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".before">Getting Ready</a></li>
-              <li><a href="#" data-filter=".ceremony">Ceremony</a></li>
-              <li><a href="#" data-filter=".reception">Reception</a></li>
-          </ul>
-      </div>
-      
-      <div id="container">
-        <% (1..40).each do |i| %>
-          <div class="box before">
-  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Before'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
-  			  </div>
-  			<% end %>
+    <div id="main-nav">
+      <ul>
+        <li><%= link_to 'Wedding Photos', wedding_path, :'data-filter' => '*' %></li>
+        <li><a class='vimeo' href="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0">Wedding Video!!!</a></li>
+        <li><a class='vimeo' href="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0">Best Man Speech Video</a></li>
+        <li><%= link_to 'Honeymoon Photos', honeymoon_path, :'data-filter' => '*' %></li>
+      </ul>
+    </div>
+
+  	<div id="spinner"><img src="/assets/images/loading.gif"></div>
+
+    <div id="filters">
+      <ul>
+        <li><a href="#" data-filter=".before">Pregame</a></li>
+        <li><a href="#" data-filter=".ceremony">Ceremony</a></li>
+        <li><a href="#" data-filter=".reception">Reception</a></li>
+      </ul>
+    </div>
+  
+    <div id="container">
+      <% (1..40).each do |i| %>
+        <div class="box before">
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Before'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			  </div>
+			<% end %>
+      <% (41..63).each do |i| %>
         <div class="box ceremony">
-          <iframe src="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0" width="225" height="127" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
-        <% (41..63).each do |i| %>
-          <div class="box ceremony">
-  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Ceremony'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
-  			  </div>
-  			<% end %>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Ceremony'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			  </div>
+			<% end %>
+      <% (64..115).each do |i| %>
         <div class="box reception">
-          <iframe class='gallery' src="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" width="225" height="127" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
-        <% (64..115).each do |i| %>
-          <div class="box reception">
-  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
-  			  </div>
-  			<% end %>
-        <% (121..138).each do |i| %>
-          <div class="box reception">
-  			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
-  			  </div>
-  			<% end %>
-  		</div>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			  </div>
+			<% end %>
+      <% (121..138).each do |i| %>
+        <div class="box reception">
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" id='img_<%= i %>' width="225" /></a>
+			  </div>
+			<% end %>
+		</div>
 	</div>
 
 </div>
@@ -50,6 +54,9 @@
   var $container = $('#container');
   
   $container.imagesLoaded( function(){
+    $('#spinner').fadeOut();
+    $('#filters').fadeIn();
+    $('#container').fadeIn();
     $container.isotope({
       // options
       itemSelector : '.box',
@@ -67,6 +74,9 @@
 </script>
 <script>
   $(document).ready(function(){
+    $('#filters').hide();
+    $('#container').hide();
 	  $(".gallery").colorbox({rel:'gallery'});
+	  $(".vimeo").colorbox({iframe:true, innerWidth:960, innerHeight:540});
   });
 </script>

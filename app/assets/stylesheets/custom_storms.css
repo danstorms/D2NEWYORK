@@ -81,7 +81,13 @@ div.subtext {
 	font-size: 70%;
 }
 
+
 /**** Isotope Filtering ****/
+
+#spinner {
+	position: absolute;
+	left: 50%;
+}
 
 .isotope-item {
   z-index: 2;

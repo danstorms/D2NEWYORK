@@ -1,16 +1,30 @@
 <div class="after-wrapper">
   
 	<div>
-      <div id="filters">
-          <ul>
-              <li><a href="#" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".canary">Canary Islands</a></li>
-              <li><a href="#" data-filter=".sevilla">Sevilla</a></li>
-              <li><a href="#" data-filter=".granada">Granada</a></li>
-              <li><a href="#" data-filter=".morocco">Morocco</a></li>
-          </ul>
-      </div>
-      
+    <div id="main-nav">
+      <ul>
+        <li><%= link_to 'Wedding Photos', wedding_path, :'data-filter' => '*' %></li>
+        <li><a class='vimeo' href="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0">Wedding Video!!!</a></li>
+        <li><a class='vimeo' href="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0">Best Man Speech Video</a></li>
+        <li><%= link_to 'Honeymoon Photos', honeymoon_path, :'data-filter' => '*' %></li>
+      </ul>
+    </div>
+
+  	<div id="spinner"><img src="/assets/images/loading.gif"></div>
+
+    <div id="filters">
+      <ul>
+        <li><a href="#" data-filter=".canary">Canary Islands</a></li>
+        <li><a href="#" data-filter=".sevilla">Sevilla</a></li>
+        <li><a href="#" data-filter=".granada">Granada</a></li>
+        <li><a href="#" data-filter=".morocco">Morocco</a></li>
+      </ul>
+    </div>
+    
+    <div id="spinner" class="spinner" style="display: none;">
+      <img id="img-spinner" src="@Url.Content("/images/ajax-loader.gif")" alt="Loading..." />
+    </div>
+        
       <div id="container">
         <% (1..18).each do |i| %>
           <div class="box canary">
@@ -45,6 +59,9 @@
   var $container = $('#container');
   
   $container.imagesLoaded( function(){
+    $('#spinner').fadeOut();
+    $('#filters').fadeIn();
+    $('#container').fadeIn();
     $container.isotope({
       // options
       itemSelector : '.box',
@@ -62,6 +79,9 @@
 </script>
 <script>
   $(document).ready(function(){
+    $('#filters').hide();
+    $('#container').hide();
 	  $(".gallery").colorbox({rel:'gallery'});
+	  $(".vimeo").colorbox({iframe:true, innerWidth:960, innerHeight:540});
   });
 </script>
