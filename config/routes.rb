@@ -1,5 +1,8 @@
 D2newyork::Application.routes.draw do
 
+  resources :comments
+
+
   resources :emails
 
   # root :to => '/public/index.html'

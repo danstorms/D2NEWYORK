@@ -23,24 +23,26 @@
     <div id="container">
       <% (1..40).each do |i| %>
         <div class="box before">
-			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Before'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Pregame' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
 			  </div>
 			<% end %>
+
       <% (41..63).each do |i| %>
         <div class="box ceremony">
-			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Ceremony'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Ceremony' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
 			  </div>
 			<% end %>
       <% (64..115).each do |i| %>
         <div class="box reception">
-			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" width="225" /></a>
 			  </div>
 			<% end %>
       <% (121..138).each do |i| %>
         <div class="box reception">
-			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" id='img_<%= i %>' width="225" /></a>
+			    <a class='gallery' href='https://s3.amazonaws.com/d2newyork/images/800/_<%= i %>.jpg' title='Wedding - Reception' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="https://s3.amazonaws.com/d2newyork/images/225/_<%= i %>.jpg" id='img_<%= i %>' width="225" /></a>
 			  </div>
 			<% end %>
+
 		</div>
 	</div>
 
@@ -78,5 +80,9 @@
     $('#container').hide();
 	  $(".gallery").colorbox({rel:'gallery'});
 	  $(".vimeo").colorbox({iframe:true, innerWidth:960, innerHeight:540});
+  });
+  $(document).bind('cbox_complete', function(){
+      var extra = $.colorbox.element().attr('comment');
+      $('#cboxLoadedContent').append('<div id="extra-info">' + extra + '</div>');
   });
 </script>
