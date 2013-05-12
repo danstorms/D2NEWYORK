@@ -82,6 +82,7 @@ div.subtext {
 }
 
 
+
 /**** Isotope Filtering ****/
 
 #spinner {
@@ -197,10 +198,10 @@ nav {
 }
  
 ul {
-  overflow: auto;
+  overflow: hidden;
   list-style-type: none;
 }
- 
+
 li {
   height: 25px;
   float: left;
@@ -241,9 +242,6 @@ li.active a {
 }
 
 /* Navigation */
-
-nav {
-}
 
 nav {
   background-color: #272323;
