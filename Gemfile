@@ -4,6 +4,8 @@ gem 'rails', '4.0.0'
 
 gem 'heroku'
 
+gem 'unicorn'
+
 group :development, :test do
   gem 'sqlite3'
 end
