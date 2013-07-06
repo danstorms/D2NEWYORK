@@ -8,14 +8,14 @@ D2newyork::Application.routes.draw do
   # root :to => '/public/index.html'
   # don't need this route to go to just a normal index.html page
 
-  match '/wedding',   :to => 'after#wedding'
-  match '/honeymoon', :to => 'after#honeymoon'
-  match '/main',      :to => 'pages#main'
-  match '/rsvp',      :to => 'pages#rsvp'
-  match '/schedule',  :to => 'pages#schedule'
-  match '/info',      :to => 'pages#info'
-  match '/registry',  :to => 'pages#registry'
-  match '/visit',     :to => 'pages#visit'
+  get '/wedding',   :to => 'after#wedding'
+  get '/honeymoon', :to => 'after#honeymoon'
+  get '/main',      :to => 'pages#main'
+  get '/rsvp',      :to => 'pages#rsvp'
+  get '/schedule',  :to => 'pages#schedule'
+  get '/info',      :to => 'pages#info'
+  get '/registry',  :to => 'pages#registry'
+  get '/visit',     :to => 'pages#visit'
 
 
 
