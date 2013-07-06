@@ -11,15 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :image_id %><br />
-    <%= f.text_field :image_id %>
-  </div>
-  <div class="field">
-    <%= f.label :comment_text %><br />
-    <%= f.text_field :comment_text %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="field">
+          <%= f.label :image_id %><br />
+          <%= f.text_field :image_id %>
+        </div>
+        <div class="field">
+          <%= f.label :comment_text %><br />
+          <%= f.text_field :comment_text %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+      <td>
+        <img src="https://s3.amazonaws.com/d2newyork/images/225/<%= @comment.image_id %>.jpg" width="225" />
+      </td>
+    </tr>
+  </table>
 <% end %>

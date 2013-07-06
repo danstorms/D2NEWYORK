@@ -1,15 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Image:</b>
-  <%= @comment.image_id %>
+  <%= link_to 'NEXT COMMENT', edit_comment_path(Comment.where("id > ?", @comment.id).first) %>  
 </p>
 
 <p>
-  <b>Comment text:</b>
+  <img src="https://s3.amazonaws.com/d2newyork/images/225/<%= @comment.image_id %>.jpg" width="225" />
+</p>
+
+<p>
   <%= @comment.comment_text %>
 </p>
 
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'All Comments', comments_path %>
