@@ -4,7 +4,7 @@ D2newyork::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
-  config.eager_load = true
+  config.eager_load = false
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
