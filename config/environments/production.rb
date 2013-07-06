@@ -18,7 +18,7 @@ D2newyork::Application.configure do
 
   #  --Don't fallback to assets pipeline if a precompiled asset is missed
   ## DO fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -50,7 +50,7 @@ D2newyork::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['custom.css']
+  config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif custom.css)
 
   # Config Heroku to send me emails
   config.action_mailer.default_url_options = { :host => 'd2newyork.heroku.com' }
