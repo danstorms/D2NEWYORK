@@ -1,6 +1,6 @@
 body {
 	background: #000;
-	background-image:url('/images/curtainlayers_1000w.png');
+	background-image:url('/assets/curtainlayers_1000w.png');
 	background-repeat:no-repeat;
 	background-position:center top;
 	color: #B0B0B0;
@@ -16,7 +16,7 @@ body {
   	font-family: Tahoma, "Museo Slab", Georgia, Serif;
   	padding:5px;
 		background: #000; 
-		background-image:url('/images/curtainlayers_1000w.png');
+		background-image:url('/assets/curtainlayers_1000w.png');
 		background-repeat:no-repeat;
 		background-position:center top;
 		color: #B0B0B0;
@@ -270,7 +270,7 @@ hr {
 
 
 input.textfield {
-	background-image:url('/images/form_bg_darker.png');
+	background-image:url('/assets/form_bg_darker.png');
 	background-repeat:repeat-x;
 	border:1px solid #d1c7ac;
 	border-radius:4px;
