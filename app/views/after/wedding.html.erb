@@ -6,7 +6,7 @@
         <li class="selected"><%= link_to 'Wedding Photos', wedding_path, :'data-filter' => '*' %></li>
         <li><a class='vimeo' href="http://player.vimeo.com/video/64006101?byline=0&amp;portrait=0" title='D2 Wedding Video' 
               comment=''>Wedding Video!!!</a></li>
-        <li><a class='vimeo' href="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" title='Mike &amp; Chris Storms - Best Man Speech' 
+        <li><a class='vimeo' href="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" title='Mike &amp; Chris Storms - Best Man Speech Video' 
               comment=''>Best Man Speech Video</a></li>
         <li><%= link_to 'Honeymoon Photos', honeymoon_path, :'data-filter' => '*' %></li>
       </ul>
@@ -89,4 +89,22 @@
         $('#cboxLoadedContent').append('<div id="extra-info">' + extra + '</div>');
       }
   });
+//  $(document).bind('cbox_open', function(){
+//    startShow();
+//  });
+//  $(document).bind('cbox_closed', function(){
+//    endShow();
+//  });
+</script>
+<script>
+//  var timeOut = 0;
+
+//  function startShow(){
+//    clearTimeout(timeOut);
+//    $.colorbox.next()
+//    timeOut = setTimeout(startShow,2000);
+//  }
+//  function endShow(){
+//    clearTimeout(timeOut);
+//  }
 </script>
