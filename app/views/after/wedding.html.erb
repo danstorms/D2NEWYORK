@@ -85,6 +85,8 @@
   });
   $(document).bind('cbox_complete', function(){
       var extra = $.colorbox.element().attr('comment');
-      $('#cboxLoadedContent').append('<div id="extra-info">' + extra + '</div>');
+      if (extra) {
+        $('#cboxLoadedContent').append('<div id="extra-info">' + extra + '</div>');
+      }
   });
 </script>
