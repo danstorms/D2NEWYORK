@@ -3,15 +3,21 @@
 	<div>
     <div id="main-nav">
       <ul>
-        <li><%= link_to 'Wedding Photos', wedding_path, :'data-filter' => '*' %> <%= link_to '(prints?)', "http://danstorms.smugmug.com/buy/32200676_Psqh5V/", :target => "_blank" %></li>
+        <li><%= link_to 'Wedding Photos', wedding_path, :'data-filter' => '*' %></li>
         <li><a class='vimeo' href="http://player.vimeo.com/video/73053462?byline=0&amp;portrait=0" title='D2 Wedding Video' 
-              comment=''>Wedding Video!!!</a></li>
+              comment=''>Wedding Video</a></li>
         <li><a class='vimeo' href="http://player.vimeo.com/video/64022777?byline=0&amp;portrait=0" title='Mike &amp; Chris Storms - Best Man Speech' 
               comment=''>Best Man Speech Video</a></li>
-        <li class="selected"><%= link_to 'Honeymoon Photos', honeymoon_path, :'data-filter' => '*' %> <%= link_to '(prints?)', "http://danstorms.smugmug.com/buy/32203696_mDVnrd/", :target => "_blank" %></li>
+        <li class="selected"><%= link_to 'Honeymoon Photos', honeymoon_path, :'data-filter' => '*' %></li>
       </ul>
     </div>
 
+    <div id="purchase">
+      <ul>
+        <li><%= link_to 'Click to Purchase >>', "http://danstorms.smugmug.com/buy/32203696_mDVnrd/", :target => "_blank" %></li>
+      </ul>
+    </div>
+    
   	<div id="spinner"><img src="/assets/loading.gif"></div>
 
     <div id="filters">

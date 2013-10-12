@@ -90,6 +90,10 @@ div.subtext {
 	left: 50%;
 }
 
+#purchase {
+	float: right;
+}
+
 .isotope-item {
   z-index: 2;
 }
