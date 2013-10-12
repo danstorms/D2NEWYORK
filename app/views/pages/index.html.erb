@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <%= csrf_meta_tag %>
-    <%= render 'layouts/stylesheets' %>
+    <title>D2NEWYORK</title>
+
+			<style type="text/css">
+				body {background-color: black;}
+			</style>
+		
+		<!-- auto redirect in 5 secs -->
+		<meta http-equiv="refresh" content="5;url=/wedding">
 		
 		<!-- Google Analytics tracking at d2nywedding -->
 		<script type="text/javascript">
@@ -20,20 +25,11 @@
 
 		</script>
 		
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
   </head>
   <body>
-	
-	<div id="page-wrap">
-	  <section class="round">
-			<% flash.each do |key, value| %>
-				<div class="flash <%= key %>"><%= value %></div>
-			<% end %>
-	    <%= yield %>
-	  </section>
-	  <!-- <%= debug(params) if Rails.env.development? %> -->
+	<div align="center">
+		<a href="/wedding"><img src="/assets/d2newyorklogo.png" border=0></a>
 	</div>
-	
+
   </body>
 </html>

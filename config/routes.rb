@@ -8,7 +8,7 @@ D2newyork::Application.routes.draw do
   # root :to => '/public/index.html'
   # don't need this route to go to just a normal index.html page
 
-  get '/',          :to => 'after#wedding'
+  get '/',          :to => 'pages#index'
   get '/wedding',   :to => 'after#wedding'
   get '/honeymoon', :to => 'after#honeymoon'
 
