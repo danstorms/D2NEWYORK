@@ -61,12 +61,14 @@
 <script src="/assets/fake-element.js"></script>
 <script src="/assets/jquery.colorbox-min.js"></script>
 <script>
+  var $spinner = $('#spinner');
   var $container = $('#container');
+  var $filters = $('#filters');
   
   $container.imagesLoaded( function(){
-    $('#spinner').fadeOut();
-    $('#filters').fadeIn();
-    $('#container').fadeIn();
+    $spinner.fadeOut();
+    $filters.fadeIn();
+    $container.fadeIn();
     $container.isotope({
       // options
       itemSelector : '.box',
@@ -84,8 +86,6 @@
 </script>
 <script>
   $(document).ready(function(){
-    $('#filters').hide();
-    $('#container').hide();
 	  $(".gallery").colorbox({rel:'gallery'});
 	  $(".vimeo").colorbox({iframe:true, innerWidth:960, innerHeight:540});
   });
@@ -95,22 +95,4 @@
         $('#cboxLoadedContent').append('<div id="extra-info">' + extra + '</div>');
       }
   });
-//  $(document).bind('cbox_open', function(){
-//    startShow();
-//  });
-//  $(document).bind('cbox_closed', function(){
-//    endShow();
-//  });
-</script>
-<script>
-//  var timeOut = 0;
-
-//  function startShow(){
-//    clearTimeout(timeOut);
-//    $.colorbox.next()
-//    timeOut = setTimeout(startShow,2000);
-//  }
-//  function endShow(){
-//    clearTimeout(timeOut);
-//  }
 </script>
