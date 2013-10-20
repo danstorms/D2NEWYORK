@@ -40,7 +40,12 @@
 			    <a class='gallery' href='http://dththdwo6977i.cloudfront.net/images/800/_<%= i %>.jpg' title='Wedding - Ceremony' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="http://dththdwo6977i.cloudfront.net/images/225/_<%= i %>.jpg" width="225" /></a>
 			  </div>
 			<% end %>
-      <% (64..115).each do |i| %>
+      <% (64..101).each do |i| %>
+        <div class="box reception">
+			    <a class='gallery' href='http://dththdwo6977i.cloudfront.net/images/800/_<%= i %>.jpg' title='Wedding - Reception' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="http://dththdwo6977i.cloudfront.net/images/225/_<%= i %>.jpg" width="225" /></a>
+			  </div>
+			<% end %>
+      <% (103..115).each do |i| %>
         <div class="box reception">
 			    <a class='gallery' href='http://dththdwo6977i.cloudfront.net/images/800/_<%= i %>.jpg' title='Wedding - Reception' comment='<%= Comment.find_by_image_id("_" + i.to_s).comment_text %>'><img src="http://dththdwo6977i.cloudfront.net/images/225/_<%= i %>.jpg" width="225" /></a>
 			  </div>
